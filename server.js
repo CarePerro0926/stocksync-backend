@@ -85,3 +85,7 @@ app.post('/api/sql', (req, res) => {
     res.json(results);
   });
 });
+
+app.get('/api/status', (req, res) => {
+  res.json({ ok: true, timestamp: new Date().toISOString() });
+});
