@@ -2,9 +2,9 @@ const mysql = require('mysql2');
 const { productos } = require('./data');
 
 const db = mysql.createConnection({
-  host: '35.193.9.91',
+  host: mysql.railway.internal,
   user: 'root',
-  password: 'UOGSsVeuMkkMDbnvfZSNgfOOSPpbPJOs',
+  password: tPFuDhQUkwGcRRKTOOLIqPRODFzVwIvu,
   database: 'railway',
   port: 3306
 });

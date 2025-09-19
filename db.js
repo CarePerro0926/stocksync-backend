@@ -3,7 +3,7 @@ const mysql = require('mysql2');
 const db = mysql.createConnection({
   host: 'mysql.railway.internal',
   user: 'root',
-  password: 'UOGSsVeuMkkMDbnvfZSNgfOOSPpbPJOs',
+  password: 'tPFuDhQUkwGcRRKTOOLIqPRODFzVwIvu',
   database: 'railway',
   port: 3306
 });
