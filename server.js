@@ -1,3 +1,5 @@
+console.log('✅ server.js cargado');
+
 const express = require('express');
 const mysql = require('mysql2');
 const cors = require('cors');
@@ -77,6 +79,8 @@ app.post('/api/seed', (req, res) => {
 app.listen(PORT, () => {
   console.log(`🚀 Backend corriendo en http://localhost:${PORT}/api/productos`);
 });
+
+throw new Error('🔥 Forzando error para verificar logs');
 
 app.post('/api/sql', (req, res) => {
   const { query } = req.body;
