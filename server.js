@@ -80,12 +80,18 @@ app.listen(PORT, () => {
   console.log(`🚀 Backend corriendo en http://localhost:${PORT}/api/productos`);
 });
 
+throw new Error('🔥 Forzando error para verificar logs');
+
 app.post('/api/sql', (req, res) => {
   const { query } = req.body;
   db.query(query, (err, results) => {
     if (err) return res.status(500).json({ error: err.message });
     res.json(results);
   });
+});
+
+app.get('/api/status', (req, res) => {
+  res.json({ ok: true, timestamp: new Date().toISOString() });
 });
 
 app.get('/api/status', (req, res) => {
