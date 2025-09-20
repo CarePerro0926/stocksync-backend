@@ -1,3 +1,5 @@
+console.log('✅ server.js cargado');
+
 const express = require('express');
 const mysql = require('mysql2');
 const cors = require('cors');
@@ -84,4 +86,8 @@ app.post('/api/sql', (req, res) => {
     if (err) return res.status(500).json({ error: err.message });
     res.json(results);
   });
+});
+
+app.get('/api/status', (req, res) => {
+  res.json({ ok: true, timestamp: new Date().toISOString() });
 });
